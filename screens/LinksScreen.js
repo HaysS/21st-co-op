@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: '#2B2B2B',
-    fontSize: 30,
+    fontSize: 15,
     marginTop: 5,
     marginBottom: 2,
     textAlign: 'center'
@@ -58,9 +58,9 @@ const styles = StyleSheet.create({
   match: {
     justifyContent: 'center', 
     alignItems: 'center',
-    height: 100,
-    borderBottomWidth: 2,
-    borderColor: 'gray',
+    height: 50,
+    borderBottomWidth: 1,
+    borderColor: 'lightgrey',
     backgroundColor:'white',
   },
 });

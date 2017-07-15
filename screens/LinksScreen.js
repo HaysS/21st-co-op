@@ -21,14 +21,18 @@ export default class LinksScreen extends React.Component {
       })
   }
 
+  showProfile(profile) {
+    this.props.navigation.navigate('Profile', {profile: profile})
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
       {
         this.state.profiles.map((profile) => {
-            console.log(profile.name)
+            // console.log(profile)
             return (
-              <TouchableOpacity onPress={() => {}}
+              <TouchableOpacity onPress={() => {this.showProfile(profile)}}
               key={profile.uid+"-touchable"} >
                 <View style={styles.match}  key={profile.uid+"-container"}>
                   <Text style={styles.name} key={profile.uid+'-name'}>{profile.name}</Text>

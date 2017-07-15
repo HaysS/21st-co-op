@@ -4,13 +4,21 @@ import { StackNavigator } from 'react-navigation';
 
 import MainTabNavigator from './MainTabNavigator';
 import LoginScreen from './LoginScreen'
+import LoadingScreen from './LoadingScreen'
+import HomeScreen from '../screens/HomeScreen'
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
 
 const RootStackNavigator = StackNavigator(
   {
     Main: {
+      screen: LoadingScreen,
+    },
+    Login: {
       screen: LoginScreen,
     },
+    Home: {
+      screen: HomeScreen,
+    }
   },
   {
     navigationOptions: () => ({

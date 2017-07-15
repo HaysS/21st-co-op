@@ -14,6 +14,15 @@ import Exponent from 'expo'
 import * as FirebaseAPI from '../modules/firebaseAPI'
 import firebase from 'firebase'
 
+import { NavigationActions } from 'react-navigation'
+
+const resetAction = NavigationActions.reset({
+  index: 0,
+  actions: [
+    NavigationActions.navigate({ routeName: 'Login'})
+  ]
+})
+
 const APP_ID = '138894766694094';
 
 const {height, width} = Dimensions.get('window');
@@ -28,6 +37,10 @@ export default class Login extends Component {
 	      ]
 	    )
 	 }
+
+	componentDidMount() {
+		this.props.navigation.dispatch(resetAction)
+	}
 
 	fbLogin = async() => {
 	 	const { type, token } = await Exponent.Facebook.logInWithReadPermissionsAsync(

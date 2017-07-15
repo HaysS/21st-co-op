@@ -36,6 +36,24 @@ export const getUser = (key) => {
     .then((snap) => snap.val())
 }
 
+export const getAllUsers = (func) => {
+  firebase.database().ref().child('users').once('value')
+    .then((snap) => {
+      if(snap.val() != null) {
+        const users = []
+
+
+        if(snap.val() != null)
+          getUsersCb(Object.keys(snap.val()), (profiles) => {
+            if(profiles != null)
+              func(profiles)
+          })
+        else
+          func(null)
+      }
+    })
+}
+
 export const getUserCb = (key, func) => {
   firebase.database().ref().child('users').child(key).once('value')
     .then((snap) => func(snap.val()))

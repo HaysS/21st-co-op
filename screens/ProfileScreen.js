@@ -23,6 +23,8 @@ export default class Profile extends Component {
             source={{uri: fbImageUrl}}
             style={{width:width, height:height/2}} />
           <Text style={styles.name}>{profile.name}</Text>
+          <Text style={styles.bio}>Profile bio goes here...</Text>
+          <Text style={styles.bio}>Contact info goes here...</Text>
         </View>
       </View>
     )

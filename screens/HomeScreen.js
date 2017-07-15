@@ -31,6 +31,10 @@ export default class HomeScreen extends React.Component {
     this.props.navigation.navigate('MentalHealthResources')
   }
 
+  openParkingInfoUrl() {
+    Linking.openURL('https://collegehouses.org/parking/').catch(err => console.error('An error occurred', err));
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -47,6 +51,11 @@ export default class HomeScreen extends React.Component {
         <TouchableOpacity onPress={() => {this.openMentalHealthResources()}} >
           <View style={styles.match}>
             <Text style={styles.name}>Mental Health Resources</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {this.openParkingInfoUrl()}} >
+          <View style={styles.match}>
+            <Text style={styles.name}>Parking Info</Text>
           </View>
         </TouchableOpacity>
       </View>

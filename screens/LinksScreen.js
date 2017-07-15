@@ -30,7 +30,6 @@ export default class LinksScreen extends React.Component {
       <ScrollView style={styles.container}>
       {
         this.state.profiles.map((profile) => {
-            // console.log(profile)
             return (
               <TouchableOpacity onPress={() => {this.showProfile(profile)}}
               key={profile.uid+"-touchable"} >

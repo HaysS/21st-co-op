@@ -6,6 +6,7 @@ import MainTabNavigator from './MainTabNavigator';
 import LoginScreen from './LoginScreen'
 import LoadingScreen from './LoadingScreen'
 import ProfileScreen from '../screens/ProfileScreen'
+import MentalHealthResourcesScreen from '../screens/MentalHealthResourcesScreen'
 import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
 
 const RootStackNavigator = StackNavigator(
@@ -21,6 +22,9 @@ const RootStackNavigator = StackNavigator(
     },
     Profile: {
       screen: ProfileScreen,
+    },
+    MentalHealthResources: {
+      screen: MentalHealthResourcesScreen,
     },
   },
   {

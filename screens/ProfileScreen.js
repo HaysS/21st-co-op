@@ -24,7 +24,9 @@ export default class Profile extends Component {
             style={{width:width, height:height/2}} />
           <Text style={styles.name}>{profile.name}</Text>
           <Text style={styles.bio}>Profile bio goes here...</Text>
-          <Text style={styles.bio}>Contact info goes here...</Text>
+          <Text style={styles.bio}>Contact info goes here...{'\n'}</Text>
+          <Text style={styles.bio}>Number of days as a member goes here...</Text>
+          <Text style={styles.bio}>Current vacation status goes here...</Text>
         </View>
       </View>
     )
@@ -51,14 +53,8 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     textAlign: 'center'
   },
-  work: {
-    fontSize:15,
-    marginBottom: 10,
-    color:'#A4A4A4',
-    textAlign: 'center'
-  },
   bio: {
-    fontSize:12,
+    fontSize:14,
     color:'black',
     textAlign: 'center'
   },

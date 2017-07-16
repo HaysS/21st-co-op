@@ -58,19 +58,19 @@ export default class Login extends Component {
 	    return (
 	      <View style={styles.container}>
 	      	<View style={{flex: 1, justifyContent: 'flex-start'}}>
-	      		<Text style={{textAlign: 'center', paddingTop: 15, fontSize: 54}}>
-	      			Welcome to 21st Street!
-	      		</Text>
-	      	</View>
-	      	<View style={{flex: 1, justifyContent: 'center'}}>
-		      	<View style={{width:width, height:height/2.4, shadowColor: '#000000', shadowOffset: {width: 0, height: 0}, shadowRadius: 3, shadowOpacity: 0.5,}}>
+		      	<View style={{width:width, height:height, shadowColor: '#000000', shadowOffset: {width: 0, height: 0}, shadowRadius: 3, shadowOpacity: 0.5,}}>
 					<Image 
 					resizeMode='cover'
 					source={require( "../assets/images/21st_image_outdoor.jpg")}
-					style={{width:width, height:height/2.4}} />
+					style={{width:width, height:height}} />
 		      	</View>
 	      	</View>
-	      	<View style={{flex: 1, justifyContent: 'center'}}>
+	      	<View style={{flex: 1, justifyContent: 'flex-start', width: width}}>
+	      		<Text style={{textAlign: 'center', paddingTop: 10, paddingBottom: 10, fontSize: 32}}>
+	      			Welcome to 21st Street.
+	      		</Text>
+	      	</View>
+	      	<View style={{flex: 1, justifyContent: 'flex-end', alignItems: 'center',}}>
 		      	<TouchableOpacity onPress={this.fbLogin}>
 		      		<Text style={styles.login}>Login with Facebook</Text>
 		      	</TouchableOpacity>
@@ -87,15 +87,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   login: {
-  	width: width/2,
+  	width: width,
+  	paddingTop: 15,
+  	paddingBottom: 15,
+  	justifyContent: 'center',
   	textAlign: 'center', 
   	color:'white', 
   	fontSize:24, 
   	backgroundColor: 'navy',
   	borderColor: 'darkblue', 
   	borderWidth: 3, 
-  	borderRadius: 10,
-  	overflow: 'hidden',
   	// shadowColor: '#000000', 
   	// shadowOffset: {width: 0, height: 0}, 
   	// shadowRadius: 10, 
